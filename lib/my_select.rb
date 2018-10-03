@@ -1,11 +1,12 @@
 def my_select(collection)
  # your code here!
  i=0
+ new_yield = []
  while i < collection.length
-   yield(collection[i]).select if true
+   if yield(collection[i]) == true
+     new_yield << yield(collection[i])
    i +=1
  end
-
- collection
+new_yield
 
 end
